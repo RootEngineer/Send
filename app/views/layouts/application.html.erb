@@ -7,8 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+    
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <a href="#" class="navbar-brand">Send</a>
+            <ul class="nav navbar-nav">
+                <!-- El link_to crea un enlace, lo que esta entre "" es el nombre del enlace y lo despues de la coma es la direccion destino-->
+                <li class="active"><%= link_to "Status" , statuses_path %></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="container"> 
+        <%= yield %>
+    </div>
 
 </body>
 </html>
